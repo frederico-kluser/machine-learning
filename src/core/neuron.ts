@@ -26,4 +26,4 @@ class Neuron {
   }
 }
 
-export { Neuron };
+export default Neuron;
