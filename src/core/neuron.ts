@@ -13,6 +13,10 @@ class Neuron {
   }
 
   getOutput(inputs: number[]): number {
+    if (inputs.length !== this.weight.length) {
+      throw new Error('Invalid input length');
+    }
+
     const weightFormatted = this.weight.reduce(
       (acc, weight, index) => acc + weight * inputs[index],
       this.bias,

@@ -66,4 +66,12 @@ describe('Neuron', () => {
 
     expect(neuron.getOutput(inputs)).toEqual(1);
   });
+
+  it('should getOutput return an error if inputs length is different than weight length', () => {
+    const neuron = new Neuron(2);
+    neuron.weight = [0.5, 0.5];
+    const inputs = [1, 1, 1];
+
+    expect(() => neuron.getOutput(inputs)).toThrow();
+  });
 });
