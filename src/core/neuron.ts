@@ -1,13 +1,12 @@
-import { v4 as uuid } from 'uuid';
 import makeWeights from '../generators/weight.js';
+import General from './general.js';
 
-class Neuron {
-  public id: string;
+class Neuron extends General {
   public weight: number[];
   public bias: number;
 
   constructor(inputCount = 1) {
-    this.id = uuid();
+    super();
     this.weight = makeWeights(inputCount);
     this.bias = 0;
   }

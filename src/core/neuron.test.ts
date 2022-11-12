@@ -10,22 +10,6 @@ describe('Neuron', () => {
     expect(neuron).toBeDefined();
   });
 
-  it('should return an id', () => {
-    const neuron = new Neuron();
-    expect(neuron.id).toBeDefined();
-  });
-
-  it('should return a different id each time', () => {
-    const neuron1 = new Neuron();
-    const neuron2 = new Neuron();
-    expect(neuron1.id).not.toEqual(neuron2.id);
-  });
-
-  it('should return a 36 characters id', () => {
-    const neuron = new Neuron();
-    expect(neuron.id.length).toEqual(36);
-  });
-
   it('should return a weight', () => {
     const neuron = new Neuron();
     expect(neuron.weight).toBeDefined();
